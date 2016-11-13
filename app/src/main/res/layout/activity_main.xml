@@ -8,10 +8,29 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="1"
     tools:context="id.sch.smktelkom_mlg.project.xirpl609182736.remindme.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="975dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="124dp"
+        android:layout_weight="0.24"
+        android:src="@mipmap/reminder" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="133dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="RemindMe!" />
+
 </LinearLayout>
