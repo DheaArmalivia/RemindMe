@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_gravity="center"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:foreground="?attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewJudul"
+            android:layout_width="250dp"
+            android:layout_height="37dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="#37474F"
+            tools:text="Alarm Bos!" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="37dp"
+            android:paddingLeft="10dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#607D8B"
+            tools:text="Deskripsi oyi" />
+
+        <TextView
+            android:id="@+id/textViewDaysLeft"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="1dp"
+            android:layout_toEndOf="@+id/textViewJudul"
+            android:layout_toRightOf="@+id/textViewJudul"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#607D8B"
+            tools:text="Days Left" />
+
+        <ImageView
+            android:id="@+id/imageViewAlarm"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/ic_alarm_black_24dp"
+            android:tint="#78909C" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="80dp"
+            android:layout_toRightOf="@+id/imageViewAlarm"
+            android:paddingLeft="3dp"
+            android:paddingTop="6dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#90A4AE"
+            tools:text="Waktune bos" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

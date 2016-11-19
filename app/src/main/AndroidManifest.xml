@@ -15,7 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".remind"></activity>
+        <activity
+            android:name=".reminder"
+            android:label="@string/title_activity_reminder"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".InputActivity"></activity>
     </application>
 
 </manifest>
