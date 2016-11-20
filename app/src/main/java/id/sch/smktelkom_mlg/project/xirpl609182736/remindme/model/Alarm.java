@@ -1,9 +1,11 @@
 package id.sch.smktelkom_mlg.project.xirpl609182736.remindme.model;
 
+import java.io.Serializable;
+
 /**
  * Created by Smktelkom on 20/11/2016.
  */
-public class Alarm {
+public class Alarm implements Serializable {
     public String judul;
     public String desk;
     public String hari;

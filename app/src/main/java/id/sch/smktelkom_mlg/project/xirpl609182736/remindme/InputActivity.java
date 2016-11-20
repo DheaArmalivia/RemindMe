@@ -1,5 +1,6 @@
 package id.sch.smktelkom_mlg.project.xirpl609182736.remindme;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,13 +9,17 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
 
+import id.sch.smktelkom_mlg.project.xirpl609182736.remindme.model.Alarm;
+
 public class InputActivity extends AppCompatActivity {
+
 
     EditText etJudul;
     EditText etDesk;
     Button bSave;
     TimePicker tpWaktu;
     DatePicker dpHari;
+    Alarm alarm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +46,30 @@ public class InputActivity extends AppCompatActivity {
         String desk = etDesk.getText().toString();
         String hari = dpHari.getContext().toString();
         String waktu = tpWaktu.getContext().toString();
+
+        if (siValid(judul, desk)) {
+            alarm = new Alarm(judul, desk, hari, waktu);
+            Intent intent = new Intent();
+            intent.putExtra(ALARM_SERVICE, alarm);
+            setResult(RESULT_OK, intent);
+            finish();
+        }
+
     }
 
+    private boolean siValid(String judul, String desk) {
+        boolean valid = true;
 
+
+        if (judul.isEmpty()) {
+            etJudul.setError("Belum diisi");
+            valid = false;
+        }
+        if (desk.isEmpty()) {
+            etDesk.setError("Belum diisi");
+            valid = false;
+        }
+        return valid;
+    }
 
 }
